@@ -1,0 +1,54 @@
+<html>
+<head>
+<script>
+function tablefun(){
+	var num1=parseInt(document.getElementById("num1").value);
+
+	for(var i=1;i<=10;i++)
+	{
+		document.getElementById("myid").innerHTML+="<tr><td>"+num1+"*"+i+"="+"</td>"+"<td>"+num1*i+"</td></tr>"+"</br>";	
+	}
+}
+
+function getFactorial()
+{
+	var number=parseInt(document.getElementById("num1").value);
+	var fact=1;
+	
+	for(var i=2;i<=number;i++)
+	{
+		fact*=i;
+	}
+	document.getElementById("myid").innerHTML="Factorial of "+number+" is: "+fact;
+	console.clear();
+}
+</script>
+</head>
+
+<body>
+  <form>
+	<table border="1" align="center">
+	  <tr>
+		<td>Enter number</td><td><input type="text" name="num1" id="num1"></td>
+	  </tr>
+	  <tr>
+	     <td colspan="2" align="center">
+	       <input type="button" name="btn" value="Print Table" onclick="tablefun()">
+	       <input type="button" name="btn1" value="Print Factorial" onclick="getFactorial()">
+	     </td>
+	  </tr>
+	</table>
+
+	<table border="1" align="center">
+	<form>
+	  <tr>
+	    <td>
+		<p id="myid">
+	    </td>
+	  </tr>
+	</form>
+	</table>
+
+  </form>
+</body>
+</html>
